@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ListFragment"
+    android:background="@android:color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80px"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="Machine Data"
+                android:fontFamily="@font/segoeuibold"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_data"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="40dp"
+                android:gravity="center"
+                android:layout_marginTop="80px"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:text="Machine Data helps you to grouping your images in phone gallery and acces them easily"
+                android:fontFamily="@font/segoeui"
+                android:layout_gravity="center"
+                android:textColor="#AAAAAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="23dp"
+                    android:text="List"
+                    android:fontFamily="@font/segoeuibold"
+                    android:textColor="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+                    android:gravity="right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sort by :"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:layout_marginStart="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_name"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rounded"
+                        android:text="Name"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="5dp"/>
+
+                    <Button
+                        android:id="@+id/btn_type"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rounded"
+                        android:text="Type"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="5dp"
+                        android:backgroundTint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerMachine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/machine_layout"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:text="+ Add machine images"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/segoeui"
+                android:layout_marginBottom="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="30dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
